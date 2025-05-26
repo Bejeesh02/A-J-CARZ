@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Home from './pages/Home';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Navbar from './navbar';
 import Hotel from './pages/hotel';
 import Login from './pages/login';
@@ -16,16 +16,14 @@ import Reviews from './pages/review';
 import Ride from './pages/ride';
 import BookInfo from './pages/bookinfo';
 
-// Initialize Google Analytics with your tracking ID
-ReactGA.initialize('UA-XXXXXXX-X'); // Replace with your actual Google Analytics ID
+// Initialize Google Analytics with your tracking ID from env variable
+ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_ID);
 
-// Simple ProtectedRoute component to protect routes
 function ProtectedRoute({ children }) {
   const phoneNumber = localStorage.getItem('phoneNumber');
   const username = localStorage.getItem('username');
 
   if (!phoneNumber || !username) {
-    // If user is not logged in, redirect to login page
     return <Navigate to="/login" replace />;
   }
 
@@ -33,47 +31,38 @@ function ProtectedRoute({ children }) {
 }
 
 function App() {
-  // State to store user data and form inputs
+  // State
   const [users, setUsers] = useState([]);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [error, setError] = useState(null); // Added state for handling errors
+  const [error, setError] = useState(null);
 
-  // API base URL
-  const API_URL = 'http://localhost:5000/api'; // You can change this for production
+  // Use API URL from environment variable
+  const API_URL = process.env.REACT_APP_API_URL;
 
-  // Fetch users from backend when component mounts
   useEffect(() => {
     axios
       .get(`${API_URL}/users`)
       .then((response) => {
         setUsers(response.data);
-        ReactGA.pageview(window.location.pathname); // Log pageview in Google Analytics
+        ReactGA.pageview(window.location.pathname); // Track pageview
       })
       .catch((error) => {
         console.error('Error fetching users:', error);
         setError('Failed to load users. Please try again later.');
       });
-  }, []);
+  }, [API_URL]);
 
-  // Handle form submission to add a new user
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Validate form input
     if (!name || !email) {
       setError('Please provide both name and email.');
       return;
     }
-
-    // Send a POST request to backend to add a new user
     axios
       .post(`${API_URL}/users`, { name, email })
       .then((response) => {
-        // Add the new user to the users list
         setUsers([...users, response.data]);
-
-        // Clear the form fields and error state
         setName('');
         setEmail('');
         setError(null);
@@ -100,8 +89,6 @@ function App() {
             <Route path="/feedback" element={<Feedback />} />
             <Route path="/review" element={<Reviews />} />
             <Route path="/ride" element={<Ride />} />
-
-            {/* Protect the bookinfo route */}
             <Route
               path="/bookinfo"
               element={

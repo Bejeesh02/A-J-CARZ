@@ -2,6 +2,8 @@
   "name": "booking",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Bejeesh02.github.io/A-J-CARZ",
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@react-google-maps/api": "^2.20.6",
     "@testing-library/jest-dom": "^5.17.0",
@@ -9,6 +11,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.9",
     "date-fns": "^4.1.0",
+    "gh-pages": "^6.3.0",
     "react": "^18.3.1",
     "react-datepicker": "^7.5.0",
     "react-dom": "^18.3.1",
@@ -27,7 +30,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "proxy": "http://localhost:5000"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

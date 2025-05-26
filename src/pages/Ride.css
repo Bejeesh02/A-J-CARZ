@@ -1,6 +1,6 @@
 /* Ride.css */
 .ride-section {
-  background-image: url('E:/self driving - Copy/booking/booking/src/pages/car/back 1.jpg'); /* Put your image in /public/images or adjust the path */
+  background-image: url('E:/self driving - Copy/booking/booking/public/image/back 1.jpg'); /* Put your image in /public/images or adjust the path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
