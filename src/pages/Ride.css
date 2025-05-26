@@ -1,0 +1,45 @@
+/* Ride.css */
+.ride-section {
+  background-image: url('E:/self driving - Copy/booking/booking/src/pages/car/back 1.jpg'); /* Put your image in /public/images or adjust the path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  min-height: 100vh;
+}
+
+.ride-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.ride-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ride-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+.ride-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.ride-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.ride-content li {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}

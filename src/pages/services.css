@@ -1,0 +1,107 @@
+/* Resetting default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Body and background setup */
+#body1 {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-height: 120vh;
+    background-image:url('E:/self driving - Copy/booking/booking/src/pages/car/back5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Styling the main container */
+#bo {
+    width: 420px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(69, 19, 193, 0.2);
+}
+
+/* Styling the main heading */
+#bo h2 {
+    font-size: 36px;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styling the input field container */
+#bo1 {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+}
+
+/* Styling the input fields */
+#bo1 input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 45px 10px 20px; /* Adjust padding to look more balanced */
+    outline: none;
+}
+#bo textarea{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 45px 10px 20px; /* Adjust padding to look more balanced */
+    outline: none;
+}
+
+/* Styling for the submit button */
+#bo button {
+    width: 100%;
+    height: 45px;
+    background-color:transparent;
+    border:2px solid #fff;
+    border-radius: 45px;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    color:white;
+    font-weight: 700;
+    position: relative;
+    margin-top: 20px; /* Adjust the button's margin */
+}
+
+
+/* Styling for error messages */
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.bbb{
+    margin: 20%;
+    width: 100%;
+    background: transparent;
+    background-color: transparent;
+    
+}
+#bb0{
+    background: transparent;
+    background-color: transparent;
+}

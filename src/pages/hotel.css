@@ -1,0 +1,134 @@
+.image-card-slider-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.image-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+  margin: 0 15px;
+}
+.image-card:hover {
+  transform: scale(1.05);
+}
+.image-card-img-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.image-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-card:hover .image-card-overlay {
+  opacity: 1;
+}
+.image-card-overlay-content {
+  color: #fff;
+  text-align: center;
+}
+.image-card-content {
+  padding: 15px;
+  text-align: center;
+}
+.image-card-title {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+.image-card-caption {
+  font-size: 1em;
+  color: #777;
+}
+.image-card-price {
+  font-size: 1em;
+  font-weight: bold;
+  color: #333;
+}
+
+.book-now-button {
+  margin-top: 20px;
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.book-now-button:hover {
+  background-color: #e55b00;
+}
+
+/* Slick */
+.slick-prev, .slick-next {
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 10;
+}
+.slick-dots li button:before {
+  color: #000;
+}
+.slick-center .image-card {
+  transform: scale(1.1);
+}
+.slick-slide {
+  padding: 0 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .image-card-img-container {
+    height: 160px;
+  }
+  .image-card-title {
+    font-size: 1.2em;
+  }
+  .image-card-caption, .image-card-price {
+    font-size: 0.95em;
+  }
+  .book-now-button {
+    padding: 8px 30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .image-card-img-container {
+    height: 140px;
+  }
+  .book-now-button {
+    padding: 6px 20px;
+    font-size: 13px;
+  }
+  .image-card-title {
+    font-size: 1em;
+  }
+  .image-card-caption, .image-card-price {
+    font-size: 0.9em;
+  }
+}

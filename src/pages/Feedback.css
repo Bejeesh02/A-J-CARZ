@@ -1,0 +1,101 @@
+/* Set the background image for the entire page */
+
+/* Full-screen wrapper to center the feedback box */
+.feedback-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+   background-image: url('E:/self driving - Copy/booking/booking/src/pages/car/back4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Transparent & blurred feedback container */
+.feedback-container {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 40px 20px;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feedback-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #f4f7fa;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #f3f4f7;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #050505;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  outline: none;
+  background: rgb(226, 220, 222);
+  transition: border 0.2s;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #0c0c0c;
+}
+
+.phone-group {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 20px;
+}
+
+.phone-group input {
+  border: 1px solid #06090c;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 16px;
+  flex-grow: 1;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.word-count {
+  text-align: right;
+  font-size: 14px;
+  color: #01070f;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.feedback-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.feedback-form button:hover {
+  background-color: #2563eb;
+}

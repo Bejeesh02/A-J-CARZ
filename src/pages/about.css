@@ -1,0 +1,52 @@
+/* Apply background image to entire section */
+.about-section {
+  background-image: url('E:/self driving - Copy/booking/booking/src/pages/car/back3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Transparent glass-effect container */
+.about-container {
+  max-width: 900px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.2); /* semi-transparent white */
+  backdrop-filter: blur(20px); /* glass effect */
+  -webkit-backdrop-filter: blur(25px);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Title styling */
+.about-title {
+  font-size: 2.4rem;
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #3b82f6;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* Paragraph text */
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+/* Quote styling */
+.quote {
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+  color: #2563eb;
+  margin-top: 30px;
+}
