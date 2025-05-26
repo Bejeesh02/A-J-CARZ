@@ -1,6 +1,6 @@
 /* Full screen background with image */
 #book-info-container {
-  background-image: url('/images/back4.jpg');
+  background-image: url('E:/self driving - Copy/booking/booking/public/image/back4.jpg');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
